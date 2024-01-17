@@ -32,7 +32,7 @@ logger = logging.getLogger()
 
 
 @app.task(queue="site-worker", soft_time_limit=60 * 60 * 12)  # 12 hours
-def create_storage_analytics_snapshot():
+def create_storage_analytics_snapshot(from_selenium_test=False):
     # Timer started !
     logger.info("Task create_storage_analytics_snapshot started")
     starting_time = time.process_time()
@@ -99,6 +99,8 @@ def create_storage_analytics_snapshot():
 
     # Evaluate the storage usage per category (competition, user or admin) and per day
     current_datetime = datetime.now(timezone.utc)
+    if from_selenium_test:
+        current_datetime = from_selenium_test# + timedelta(days=1)
     max_history_days = 365  # days
 
     # Competitions
@@ -116,6 +118,8 @@ def create_storage_analytics_snapshot():
             )
         )
     )
+    print(f"HHHHHHHHHHHH{competitions_datasets}HHHHHHHHHHHHHH")
+    # import pdb; pdb.set_trace()
 
     last_competition_storage_datapoint = CompetitionStorageDataPoint.objects.order_by(
         "-at_date"

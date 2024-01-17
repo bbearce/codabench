@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <th class="center aligned">#</th>
-            <th>Participant</th>
+            <th selenium="Leaderboard_Participant_Tab">Participant</th>
             <th>Entries</th>
             <th>Date of last entry</th>
             <th each="{ column in filtered_columns }" colspan="1">{column.title}</th>

@@ -3,7 +3,7 @@
 
     <div class="ui top no-segment bluewood inverted two column item menu analytics">
         <a class="active item" data-tab="overview">Overview</a>
-        <a class="item" data-tab="storage">Storage</a>
+        <a selenium="storage" class="item" data-tab="storage">Storage</a>
     </div>
 
     <div class="ui grid">
@@ -13,9 +13,9 @@
             <div class="ui selection dropdown" ref="date_shortcut_dropdown">
                 <input type="hidden" name="range_shortcut" value="month">
                 <i class="dropdown icon"></i>
-                <div class="text">This Month</div>
+                <div selenium="This_Month_Dropdown" class="text">This Month</div>
                 <div class="menu">
-                    <div class="item" data-value="year">This Year</div>
+                    <div selenium="This_Month_Dropdown_Year" class="item" data-value="year">This Year</div>
                     <div class="item" data-value="month">This Month</div>
                     <div class="item" data-value="week">This Week</div>
                     <div class="item" data-value="custom">Custom</div>
@@ -63,14 +63,14 @@
 
     <div class="ui active tab segment" data-tab="overview">
         <div class="ui top attached tabular menu">
-            <a class="active item" data-tab="competitions">Benchmarks</a>
-            <a class="item" data-tab="submissions">Submissions</a>
-            <a class="item" data-tab="users">Users</a>
+            <a selenium="benchmarks-created-tab-link" class="active item" data-tab="competitions">Benchmarks</a>
+            <a selenium="submissions-created-tab-link" class="item" data-tab="submissions">Submissions</a>
+            <a selenium="users-created-tab-link" class="item" data-tab="users">Users</a>
         </div>
 
         <div class="ui bottom attached active tab segment" data-tab="competitions">
             <div class="ui small statistic">
-                <div class="value">
+                <div selenium="benchmarks-created" class="value">
                     {competitions}
                 </div>
                 <div class="label">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="ui small statistic">
-                <div class="value">
+                <div selenium="benchmarks-published" class="value">
                     {competitions_published}
                 </div>
                 <div class="label">
@@ -94,7 +94,7 @@
 
         <div class="ui bottom attached tab segment" data-tab="submissions">
             <div class="ui small statistic">
-                <div class="value">
+                <div selenium="submissions-made" class="value">
                     {submissions_made}
                 </div>
                 <div class="label">
@@ -107,9 +107,9 @@
             </div>
         </div>
 
-        <div class="ui bottom attached tab segment" data-tab="users">
+         <div class="ui bottom attached tab segment" data-tab="users">
             <div class="ui small statistic">
-                <div class="value">
+                <div selenium="users-total" class="value">
                     {users_total}
                 </div>
                 <div class="label">
@@ -129,9 +129,9 @@
 
     <div class="ui tab segment storage" data-tab="storage">
         <div class="ui top attached tabular menu">
-            <a class="item" data-tab="usage-history">Usage history</a>
-            <a class="item" data-tab="competitions-usage">Competitions usage</a>
-            <a class="item" data-tab="users-usage">Users usage</a>
+            <a selenium="usage-history" class="item" data-tab="usage-history">Usage history</a>
+            <a selenium="competitions-usage" class="item" data-tab="competitions-usage">Competitions usage</a>
+            <a selenium="users-usage" class="item" data-tab="users-usage">Users usage</a>
         </div>
 
         <div class="ui bottom attached tab segment" data-tab="usage-history">

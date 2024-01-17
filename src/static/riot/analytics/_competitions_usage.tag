@@ -7,7 +7,7 @@
                 <option each="{ competition in competitionsDropdownOptions }" value="{ competition.id }">{ competition.title }</div> 
             </div>
         </select>
-        <button class="ui button" onclick={selectTopFiveBiggestCompetitions}>Select top 5 biggest competitions</button>
+        <button selenium="select_top_5_biggest_competitions" class="ui button" onclick={selectTopFiveBiggestCompetitions}>Select top 5 biggest competitions</button>
         <button class="ui green button" onclick={downloadCompetitionsHistory}>
             <i class="icon download"></i>Download as CSV
         </button>

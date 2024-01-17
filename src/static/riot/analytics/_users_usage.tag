@@ -7,7 +7,7 @@
                 <option each="{ user in usersDropdownOptions }" value="{ user.id }">{ user.name }</div> 
             </div>
         </select>
-        <button class="ui button" onclick={selectTopFiveBiggestUsers}>Select top 5 biggest users</button>
+        <button selenium="select_top_5_biggest_users" class="ui button" onclick={selectTopFiveBiggestUsers}>Select top 5 biggest users</button>
         <button class="ui green button" onclick={downloadUsersHistory}>
             <i class="icon download"></i>Download as CSV
         </button>
